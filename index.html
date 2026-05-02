@@ -3,142 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenLab Studio | Aqua Defender Portfolio</title>
+    <title>Green Lab Studio | Portfolio</title>
     <style>
         :root {
-            --primary-blue: #0077be;
-            --dark-bg: #050b1a;
-            --card-bg: #0a192f;
-            --accent-yellow: #ffcc00;
-            --text-white: #e6f1ff;
+            --neon-green: #00ff88;
+            --dark-bg: #0b0f15;
+            --card-bg: #111821;
+            --text-gray: #a0a0a0;
+            --border-color: #1a2430;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, sans-serif;
             background-color: var(--dark-bg);
-            color: var(--text-white);
+            color: white;
             margin: 0;
             padding: 0;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         header {
-            padding: 50px 20px;
-            background: linear-gradient(to bottom, #004e92, #000428);
+            text-align: center;
+            padding: 60px 20px;
         }
 
-        .logo-text {
-            font-size: 3rem;
-            font-weight: bold;
-            color: white;
+        .lab-tag {
+            color: var(--neon-green);
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin: 0;
-            text-shadow: 0px 4px 10px rgba(0, 119, 190, 0.8);
         }
 
-        .subtitle {
-            color: var(--accent-yellow);
-            font-weight: bold;
-            letter-spacing: 3px;
+        .stats-bar {
+            display: flex;
+            gap: 40px;
+            margin: 20px 0;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
+        .stat { text-align: center; }
+        .stat-val { color: var(--neon-green); font-weight: bold; display: block; font-size: 1.2rem; }
+        .stat-label { font-size: 0.7rem; color: var(--text-gray); text-transform: uppercase; }
+
+        .main-container {
+            background-color: var(--card-bg);
+            width: 90%;
+            max-width: 700px;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            border-left: 4px solid var(--neon-green);
+            padding-left: 15px;
+            margin-top: 30px;
+            color: #eee;
+        }
+
+        .info-box {
+            background: rgba(0, 255, 136, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.1);
             padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            border-radius: 8px;
+            margin: 15px 0;
         }
 
-        .game-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid #112240;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .info-row {
+            margin: 10px 0;
+            font-size: 0.95rem;
         }
 
-        .game-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 119, 190, 0.4);
-        }
+        .label { color: var(--neon-green); font-weight: 500; width: 140px; display: inline-block; }
+        .value { color: white; }
 
-        .game-card img {
-            width: 100%;
-            height: auto;
+        p { color: var(--text-gray); line-height: 1.6; font-size: 0.95rem; }
+
+        .project-link {
             display: block;
-        }
-
-        .card-content {
-            padding: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 12px 25px;
+            background: #1a2430;
+            color: var(--neon-green);
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            margin-top: 15px;
-            transition: background 0.3s;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            border-left: 0px solid var(--neon-green);
         }
 
-        .btn:hover {
-            background-color: #00aaff;
-        }
-
-        .btn-playstore {
-            background-color: #000;
-            border: 1px solid #555;
+        .project-link:hover {
+            background: #24303f;
+            border-left: 4px solid var(--neon-green);
+            padding-left: 20px;
         }
 
         footer {
-            margin-top: 50px;
-            padding: 30px;
-            font-size: 0.9rem;
-            opacity: 0.7;
+            margin-bottom: 40px;
+            color: #444;
+            font-size: 0.8rem;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1 class="logo-text">Aqua Defender</h1>
-    <p class="subtitle">SHOOT • SURVIVE • DEFEND</p>
-</header>
-
-<div class="container">
-    
-    <div class="game-card">
-        <img src="https://play-lh.googleusercontent.com/6uqH2M... (Placeholder)" alt="Abyssal Crown">
-        <div class="card-content">
-            <h3>Abyssal Crown Ocean Sprint12k</h3>
-            <p>Dive into the depths and conquer the abyss in this high-speed underwater challenge.</p>
-            <a href="https://play.google.com/store/apps/details?id=com.greenlab.abyssalcrown" target="_blank" class="btn btn-playstore">
-                GET IT ON Google Play
-            </a>
+    <header>
+        <div class="lab-tag">Experimental Lab</div>
+        <h1>Green Lab Studio</h1>
+        <p style="color: #666;">Elite Development & Professional Game Scripting</p>
+        
+        <div class="stats-bar">
+            <div class="stat"><span class="stat-val">100%</span><span class="stat-label">JS Scripting</span></div>
+            <div class="stat"><span class="stat-val">Elite</span><span class="stat-label">UX/UI Design</span></div>
+            <div class="stat"><span class="stat-val">Verified</span><span class="stat-label">Pro Developer</span></div>
         </div>
+    </header>
+
+    <div class="main-container">
+        
+        <h2>About the Studio</h2>
+        <p>From a dedicated content developer to a professional game developer, <strong>Green Lab Studio</strong> is a technical powerhouse. I use a clean, high-performance stack of HTML, CSS, and JavaScript to build interactive digital worlds.</p>
+
+        <h2>Developer Profile</h2>
+        <div class="info-box">
+            <div class="info-row"><span class="label">Developer Name:</span> <span class="value">Gourab Saha</span></div>
+            <div class="info-row"><span class="label">Developer Age:</span> <span class="value">31</span></div>
+            <div class="info-row"><span class="label">Developer Email:</span> <span class="value">gourabmotolenovo@gmail.com</span></div>
+        </div>
+
+        <h2>Current Operations</h2>
+        <a href="https://play.google.com/store/apps/details?id=com.greenlab.abyssalcrown" class="project-link" target="_blank">
+            <strong>Abyssal Crown Ocean Sprint12k:</strong> High-vibrancy action with predatory AI chasing logic.
+        </a>
+
+        <a href="https://gourabs289-maker.github.io/GoldenTideOceanBlitz/" class="project-link" target="_blank">
+            <strong>GoldenTide Ocean Blitz:</strong> A multi-act tactical underwater combat experience.
+        </a>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://gourabmotolenovo.github.io/GreenLabStudio/" style="background: var(--neon-green); color: black; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem;">Visit GitHub Lab</a>
+        </div>
+
     </div>
 
-    <div class="game-card">
-        <img src="2762.png" alt="GoldenTide Ocean Blitz">
-        <div class="card-content">
-            <h3>GoldenTide Ocean Blitz</h3>
-            <p>Defend the ocean and be the hero! Fast-paced action with power-ups and massive combos.</p>
-            <a href="https://gourabs289-maker.github.io/GoldenTideOceanBlitz/" target="_blank" class="btn">PLAY NOW</a>
-        </div>
-    </div>
-
-</div>
-
-<footer>
-    <p>&copy; 2023 GreenLab Studio. All Rights Reserved.</p>
-    <p><a href="https://gourabmotolenovo.github.io/GreenLabStudio/" style="color: var(--accent-yellow);">Main Portfolio</a></p>
-</footer>
+    <footer>
+        © 2026 Green Lab Studio | Professional Identity Page
+    </footer>
 
 </body>
 </html>
